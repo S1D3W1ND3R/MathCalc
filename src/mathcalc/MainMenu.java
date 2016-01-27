@@ -72,6 +72,10 @@ public class MainMenu {
         //x-intercepts
         System.out.printf("The two x-intercepts are x = %.2f and x = %.2f\n",
                 quadStd.getxInt1(), quadStd.getxInt2());
+        
+        //vertex form
+        System.out.printf("The vertex form is %.2f(x-%.2f)^2 + %.2f",
+                quadStd.getVtxA(), quadStd.getVtxH(), quadStd.getVtxK());
 
         reRun();
 
@@ -96,12 +100,16 @@ public class MainMenu {
                 quadVtx.getVtxH(), quadVtx.getVtxK());
 
         //y-intercept
-        System.out.printf("The y-intercept is (0.00, %.3f)\n", quadVtx.getyIntercept());
+        System.out.printf("The y-intercept is (0.000, %.3f)\n", quadVtx.getyIntercept());
 
         //x-intercepts
         System.out.printf("The two x-intercepts are x = %.3f and x = %.3f",
                 quadVtx.getxInt1(), quadVtx.getxInt2());
 
+        //vertex form
+        System.out.printf("The vertex form is y = %.2fx^2 + %.2fx + %.2f",
+                quadVtx.getStdA(), quadVtx.getStdB(), quadVtx.getStdC());
+        
         reRun();
     }
 
@@ -109,20 +117,23 @@ public class MainMenu {
      *
      */
     public static void reRun() {
-        String run = "a";
+        boolean validInput;
         System.out.print("Run again? (y/n) ");
-        run = scanIn.next();
-        switch (run) {
-            case "y":
-            case "Y":
-                start();
-                break;
-            case "n":
-            case "N":
-                System.exit(0);
-            default:
-                System.out.print("Please enter y/Y or n/N: ");
-                break;
-        }
+        do {
+            switch (scanIn.next().charAt(0)) {
+                case 'y':
+                case 'Y':
+                    start();
+                    validInput = true;
+                    break;
+                case 'n':
+                case 'N':
+                    System.exit(0);
+                default:
+                    System.out.print("Please enter y/Y or n/N: ");
+                    validInput = false;
+                    break;
+            }
+        } while (validInput != true);
     }
 }

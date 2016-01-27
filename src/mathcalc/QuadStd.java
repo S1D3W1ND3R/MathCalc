@@ -75,6 +75,10 @@ public class QuadStd {
         return x;
     }
 
+    public double getVtxA() {
+        return vtxA;
+    }
+
     /**
      *
      * @return

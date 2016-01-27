@@ -4,7 +4,7 @@ package mathcalc;
  *
  * @author S1D3W1ND3R
  */
-public class CircGen {
+public class CircCenRad {
 
     private double stdA;
     private double stdB;
@@ -15,20 +15,21 @@ public class CircGen {
     private double centerY;
     private double radius;
 
-    public CircGen(double stdA, double stdB, double stdC, double stdD, double stdE) {
-        this.stdA = stdA;
-        this.stdB = stdB;
-        this.stdC = stdC;
-        this.stdD = stdD;
-        this.stdE = stdE;
+    public CircCenRad(double centerX, double centerY, double radius) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+        this.radius = radius;
         figurer();
     }
 
     private void figurer() {
 
-        // centerX = 25
-        // centerY;
-        // radius;
+        //stdA =  
+        //stdB =
+        //stdC =
+        //stdD =
+        //stdE =
+        
     }
 
 }

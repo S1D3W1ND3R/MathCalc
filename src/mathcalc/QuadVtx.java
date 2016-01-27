@@ -93,6 +93,18 @@ public class QuadVtx {
         return vtxK;
     }
 
+    public double getStdA() {
+        return stdA;
+    }
+
+    public double getStdB() {
+        return stdB;
+    }
+
+    public double getStdC() {
+        return stdC;
+    }
+
     /**
      *
      * @return
